@@ -12,6 +12,13 @@ $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist']['rssdisplay_p
     'Fetch and display a RSS feed'
 );
 
+$iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
+$iconRegistry->registerIcon(
+    'rss-wizard-icon',
+    \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+    ['source' => 'EXT:' . $_EXTKEY . '/Resources/Public/Icons/rss.svg']
+);
+
 // Possible Static TS loading
 $configuration = unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['rss_display']);
 if (true === isset($configuration['autoload_typoscript']['value']) && true === (bool)$configuration['autoload_typoscript']['value']) {
