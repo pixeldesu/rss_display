@@ -26,7 +26,7 @@ class Wizard
     public function proc($wizardItems)
     {
         $wizardItems['plugins_tx_rssdisplay_pi1'] = array(
-            'icon-identifier' => 'rss-wizard-icon', #'Resources/Public/Images/RssDisplay.png',
+            'icon' => 'FILE:EXT:rss_display/Resources/Public/Icons/rss.svg', #'Resources/Public/Images/RssDisplay.png',
             'title' => $this->getLanguageService()->sL('LLL:EXT:rss_display/Resources/Private/Language/locallang.xlf:wizard.title'),
             'description' => $this->getLanguageService()->sL('LLL:EXT:rss_display/Resources/Private/Language/locallang.xlf:wizard.description'),
             'params' => '&defVals[tt_content][CType]=list&defVals[tt_content][list_type]=rssdisplay_pi1'
